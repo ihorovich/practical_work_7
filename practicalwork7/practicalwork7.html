@@ -1,0 +1,61 @@
+<script type="text/javascript">
+  RED.nodes.registerType('pw7', {
+    category: 'formats',
+    color: '#2D9596',
+    defaults: {
+      name: { value: "" },
+      input_key: { value: "" },
+      output_key: { value: "" },
+      units: { value: "celsius" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "file.svg",
+    label: function () {
+      return this.name || "pw7";
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="pw7">
+   <div class="form-row">
+    <label for="node-input-input_key">
+    <i class="fa fa-arrow-right"></i> Input prop</label>
+    <input
+      type="text"
+      id="node-input-input_key"
+      style="width: 70%;"
+      placeholder="property name in msg.payload or empty for all"
+    />
+  </div>
+  <div class="form-row">
+    <label for="node-input-output_key"
+      ><i class="fa fa-solid fa-arrow-left"></i> Output prop</label>
+    <input
+      type="text"
+      id="node-input-output_key"
+      style="width: 70%;"
+      placeholder="property name"
+    />
+  </div>
+  <div class="form-row">
+    <label style="width:auto" for="node-input-units"
+      ><i class="fa fa-hourglass-half"></i> Units&nbsp;</label>
+    <select name="units" id="node-input-units">
+      <option value="celsius">Celsius</option>
+      <option value="fahrenheit">Fahrenheit</option>
+    </select>
+
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-tips" style="font-size:83%">
+    Converts the temperature from Celsius to Fahrenheit or vice versa, depending on the user's choice.
+  </div>
+</script>
+
+<script type="text/html" data-help-name="pw7">
+    <p>Perform the conversion according to the units of measurement specified by the user.</p>
+</script>

@@ -1,0 +1,13 @@
+{
+  "name": "node-red-contrib-practical_work_7",
+  "version": "1.0.0",
+  "description": "practical_work_7",
+  "author": "",
+  "license": "ISC",
+  "main": "practicalwork7/practicalwork7.js",
+  "node-red" : {
+        "nodes": {
+            "pw7": "practicalwork7/practicalwork7.js"
+        }
+    }
+}
